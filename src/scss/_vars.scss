@@ -1,0 +1,147 @@
+/* Variables */
+
+$purple: #8f4dae;
+$azure: #4db2b3;
+$grey: #2b2b2b;
+$lgrey: #f4f5f7;
+$ltext: #efefef;
+$text: #424242;
+$max-width: 1200px;
+$text-color: #424753;
+$text-color-light: #dedede;
+$title-color: #6f788c;
+$font-size: 0.9rem;
+$family-primary: 'Montserrat', sans-serif;
+$family-secondary: $family-primary;
+$box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+$linear-gradient: linear-gradient(-40deg, $azure, $purple);
+$base-transition: all cubic-bezier(.17, .67, .5, 1) 0.3s;
+$timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+
+/*HOME*/
+
+$size: 20px;
+$speed: 2s;
+$peakopacity:0.7;
+
+/* MEDIA QUERY */
+$mobile: "(max-width: 768px)";
+$mbp: 768px;
+$dbp: 769px;
+
+/* mixins */
+
+@mixin centerContainer() {
+    width: 100%;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flexBasic($content, $direction, $wrap) {
+    display: flex;
+    justify-content: $content;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+//logo header
+@keyframes logo {
+    0% {
+        margin-right: 5px;
+        transform: rotateZ(0);
+    }
+    50% {
+        margin-right: 50px;
+        transform: rotateZ(-40deg);
+    }
+    // 60% {
+    //     transform: rotateZ(-10deg);
+    // }
+    75% {
+        margin-right: -15px;
+        // transform: rotateZ(0);
+    }
+    100% {
+        margin-right: 5px;
+        transform: rotateZ(0);
+    }
+}
+
+//Name homepage
+@keyframes dash {
+
+    to {
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+        fill: rgba(255,255,255,0.4);
+    }
+}
+
+@keyframes dashRole {
+    0% {
+        stroke-dasharray: 0, 1000000000000000;
+        fill: none;
+    }
+    100% {
+        stroke-dasharray: 700, 0;
+        fill: #fff;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes arrows {
+    0% {
+        border-left: 3px solid rgba(255, 255, 255, 0);
+        border-bottom: 3px solid rgba(255, 255, 255, 0);
+        transform: translate($size/-6, $size*4/-6)rotate(-45deg);
+    }
+    10%,
+    90% {
+        border-left: 3px solid rgba(255, 255, 255, 0);
+        border-bottom: 3px solid rgba(255, 255, 255, 0);
+    }
+    50% {
+        border-left: 3px solid rgba(255, 255, 255, $peakopacity);
+        border-bottom: 3px solid rgba(255, 255, 255, $peakopacity);
+        transform: translate($size/-6, 0px)rotate(-45deg)scale(1.4);
+    }
+    100% {
+        border-left: 3px solid rgba(255, 255, 255, 0);
+        border-bottom: 3px solid rgba(255, 255, 255, 0);
+        transform: translate($size/-6, $size*4/6)rotate(-45deg);
+    }
+}
+@keyframes slide-in {
+    0% {
+        right: -1000px;
+        opacity: 0;
+        top: -50px;
+    }
+    50% {
+        right: 0;
+        opacity: 0.5;
+    }
+    99% {
+        right: 0;
+        opacity: 1;
+    }
+    100% {
+        right: 0;
+        opacity: 0;
+    }
+}

@@ -106,8 +106,8 @@ table {
     right: 0;
     opacity: 0; } }
 html, body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #580f0f;
+  font-family: "Titillium Web", sans-serif, sans-serif;
+  background-color: #841617;
   overflow-x: hidden; }
 
 .button {
@@ -134,7 +134,7 @@ html, body {
     background-color: #552e67; }
 
 h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Marck Script", cursive;
   text-align: center;
   font-size: 75px;
   color: #6f788c;
@@ -143,7 +143,7 @@ h1 {
   margin-bottom: 30px; }
 
 h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Marck Script", cursive;
   text-align: center;
   margin: 10px 0 30px;
   font-size: 37px;
@@ -496,7 +496,7 @@ h3 strong {
   font-weight: 700;
   padding: 20px 0 10px;
   color: #424242;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Marck Script", cursive; }
 .blog-cat__text {
   text-align: left;
   width: 90%;
@@ -754,7 +754,7 @@ footer {
     line-height: 60px;
     color: #efefef;
     font-size: 0.75rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Marck Script", cursive;
     letter-spacing: 1px; }
 .footer__social {
   height: 60px;

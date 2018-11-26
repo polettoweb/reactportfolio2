@@ -1,0 +1,12 @@
+.workshop {
+    min-height: 80vh;
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: $text;
+        margin-bottom: 50px;
+        flex-basis: 100%;
+        text-shadow: 0 0 0 white;
+        padding-top: 120px;
+    }
+}

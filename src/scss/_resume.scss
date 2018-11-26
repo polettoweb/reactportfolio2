@@ -1,0 +1,63 @@
+.resume {
+  &__container {
+    width: 100%;
+    min-height: 100vh;
+    // @include centerItem($max-width);
+    padding-bottom: 100px;
+  }
+  &__intro {
+    width: 100%;
+    margin: 0 auto 20px;
+    height: auto;
+    // background-color: white;
+    padding-bottom: 20px;
+    h1 {
+      font-size: 28px;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    p {
+      color: $text;
+      text-align: center;
+      font-weight: 400;
+      font-size: 18px;
+      max-width: 70%;
+      letter-spacing: 1.5px;
+    }
+  }
+  &__me {
+    text-align: center;
+    @include flexBasic(center, row, wrap);
+    padding-bottom: 30px;
+    p {
+      padding: 0 2%;
+    }
+  }
+}
+p,
+h1,
+h2,
+h3 {
+  strong {
+    color: darken($purple, 10%);
+    font-weight: 500;
+    position: relative;
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 50%;
+    //     width: 0;
+    //     height: 1px;
+    //     background-color: darken($purple, 10%);
+    // }
+    // &:hover {
+    //     p {
+    //         strong:before {
+    //                 width: 90%;
+    //                 left: 0;
+    //         }
+    //     }
+    // }
+  }
+}
