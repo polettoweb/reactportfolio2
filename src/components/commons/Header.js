@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
 
-import Navigation from './Navigation';
+import Navigation from './Navitation';
+import MenuItem from './MenuItem';
 import logo from '../../img/logo.svg';
 
 const HeaderStyle = styled.header`
@@ -17,6 +19,7 @@ const Logo = styled.div`
     position: absolute;
     top: 36px;
     left: 36px;
+    
     img {
         width: auto;
         height: 100%;
@@ -29,9 +32,16 @@ class Header extends Component {
         return (
             <HeaderStyle>
               <Logo>
-                  <img src={logo} alt="logo" />
+                  <a href="/" title="Back to the Homepage"><img src={logo} alt="logo" /></a>
               </Logo>
-              <Navigation />
+              <MediaQuery query="(min-width: 1024px)">
+                <Navigation />
+              </MediaQuery>
+              <MediaQuery query="(max-width: 1023px)">
+                <MenuItem>
+                    <Navigation />
+                </MenuItem>
+              </MediaQuery>
             </HeaderStyle>
         )
     }

@@ -2,6 +2,11 @@ html, body {
     font-family: $family-primary;
     background-color: #580f0f;
     overflow-x: hidden;
+    box-sizing: border-box;
+
+    & * {
+        box-sizing: border-box;
+    }
 }
 %slide-in-right {
     right: 0;
