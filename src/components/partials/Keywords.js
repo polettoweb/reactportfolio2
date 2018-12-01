@@ -51,7 +51,8 @@ const KeywordsContainer = styled.div`
 
     @media (max-width: 450px) {
         /* to fucking fix */
-        transform: scale(0.5);
+        bottom:0;
+        transform: translateX(-50%) scale(0.5);
     }
 
     .keywords__wrapper {

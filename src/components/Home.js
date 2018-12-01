@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Tilt from 'react-tilt';
-import MediaQuery from 'react-responsive';
 import Keywords from './partials/Keywords';
 import me from '../img/marco.png';
 
@@ -18,7 +16,7 @@ const HomeContainer = styled.div`
 
 const IntroContainer = styled.div`
     width: 100%;
-    height: 500px;
+    height: auto;
     position: relative;
     display: flex;
     justify-content: center;
@@ -32,11 +30,11 @@ const IntroContainer = styled.div`
         flex-direction: column-reverse;
     }
 
-    .Tilt {
+    .tilt {
         width: 500px;
-        height: auto;
+        height: 500px;
         position: absolute;
-        top: 25%;
+        top: 20%;
         left: 5%;
         transform: rotateY(40deg);
         background: rgba(255, 255, 255, 0.1);
@@ -48,6 +46,7 @@ const IntroContainer = styled.div`
         }
         img {
             display: block;
+            height: 100%;
             margin-left: 20px;
         }
     }
@@ -61,14 +60,18 @@ const IntroContainer = styled.div`
         @media (max-width: 1199px) {
             margin-left: 0;
         }
-        /* @media (max-width: 960px) {
+        @media (max-width: 960px) {
             font-size: 2.5em;
             margin-right: 20px;
-            text-align: right;
+            /* text-align: right; */
         }
-        @media (max-width: 768px) {
-
+        
+        /* @media (max-width: 768px) {
+            text-align: left;
         } */
+        @media (max-width: 480px) {
+            font-size: 2em;
+        }
     }
 `;
 
@@ -85,20 +88,10 @@ class Home extends Component {
         return (
             <HomeContainer>
                 <IntroContainer>
-                    <MediaQuery query="(min-width: 960px)">
-                        <Tilt onMouseLeave={this.handleMouseLeave} className="Tilt" options={{ max: 40, perspective: 1000, reverse: true, onMouseLeave: 'transform: rotateY(40deg)' }}>
-                            <img src={me} alt="Marco Poletto" />
-                        </Tilt>
-                    </MediaQuery>
-                    <MediaQuery query="(max-width: 959px)">
-                        <div className="Tilt">
-                            <img src={me} alt="Marco Poletto" />
-                        </div>
-                    </MediaQuery>
-
-                    {/* <div> */}
+                    <div className="tilt">
+                        <img src={me} alt="Marco Poletto" />
+                    </div>
                     <h1>Hi, I'm Marco, <br /><span>Frontend Developer<br />and UI Engineer</span></h1>
-                    {/* </div> */}
                 </IntroContainer>
                 <Keywords />
 

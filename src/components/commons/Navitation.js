@@ -12,22 +12,37 @@ const Nav = styled.div`
     z-index: 100;
     top: 0;
     left: 0;
+    @media (max-width: 1023px) {
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 `;
 
-const NavComponent = styled.nav`
+const NavComponent = styled.div`
     width: 100%;
-
+    /* @media (max-width: 1023px) {
+        height: 500px;
+    } */
     ul {
         display: flex;
         justify-content: flex-end;
-        height: 100%;
-
+        height: auto;
+        
+        @media (max-width: 1023px) {
+            flex-direction: column;
+        }
         li {
             font-weight: 500;
             transition: all 0.4s ease-in-out;
             margin-right: 20px;
             line-height: 80px;
             position: relative;
+            @media (max-width: 1023px) {
+                height: 80px;
+                margin-right: 0;
+            }
 
             &:after {
                 content: '';
@@ -38,6 +53,9 @@ const NavComponent = styled.nav`
                 height: 2px;
                 bottom: 20px;
                 transition: all 0.3s ease-in-out;
+                @media (max-width: 1023px) {
+                    content: none;
+                }
             }
 
             &:hover {
