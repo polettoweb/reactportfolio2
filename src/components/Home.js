@@ -12,6 +12,9 @@ const HomeContainer = styled.div`
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    @media (max-width: 959px) {
+        height: auto;
+    }
 `;
 
 const IntroContainer = styled.div`
@@ -26,6 +29,7 @@ const IntroContainer = styled.div`
     @media (max-width: 1199px) {
         justify-content: flex-end
     }
+
     @media (max-width: 960px) {
         flex-direction: column-reverse;
     }
@@ -38,16 +42,29 @@ const IntroContainer = styled.div`
         left: 5%;
         transform: rotateY(40deg);
         background: rgba(255, 255, 255, 0.1);
-        @media (max-width: 960px) {
+
+        @media (max-width: 959px) {
+            width: 100%;
             position: relative;
             transform: none;
             top:0;
             left: 0;
         }
+
+        @media (max-width:579px) {
+            height: auto;
+        }
+
         img {
             display: block;
             height: 100%;
             margin-left: 20px;
+
+            @media (max-width:579px) {
+                width: 100%;
+                height: auto;
+                margin-left: 0;
+            }
         }
     }
     h1 {
@@ -57,31 +74,49 @@ const IntroContainer = styled.div`
         color: #ffffff;
         text-align: left;
         margin-left:60px;
+
         @media (max-width: 1199px) {
             margin-left: 0;
         }
-        @media (max-width: 960px) {
+
+        @media (max-width: 959px) {
             font-size: 2.5em;
             margin-right: 20px;
-            /* text-align: right; */
         }
-        
-        /* @media (max-width: 768px) {
-            text-align: left;
-        } */
-        @media (max-width: 480px) {
+
+        @media (max-width: 479px) {
             font-size: 2em;
         }
     }
 `;
 
+const Intro = styled.div`
+    position: absolute;
+    width: 100%;
+    padding: 0 10px;
+    max-width: 500px;
+    left: 50%;
+    color: white;
+    line-height: 30px;
+
+    @media (max-width: 959px) {
+        position: relative;
+        left: auto;
+        margin: 0 auto;
+        margin-bottom: 36px;
+    }
+
+    @media (min-height: 900px) {
+        line-height:35px;
+        font-size: 16px;
+    }
+`;
+
 class Home extends Component {
     handleMouseLeave(e) {
-
         setTimeout(function () {
             document.querySelector('.Tilt').style.transform = "rotateY(40deg)";
         }, 0)
-
     }
 
     render() {
@@ -94,9 +129,11 @@ class Home extends Component {
                     <h1>Hi, I'm Marco, <br /><span>Frontend Developer<br />and UI Engineer</span></h1>
                 </IntroContainer>
                 <Keywords />
+                <Intro>
+                    <p>I create websites from scratch using the latest cutting edge web technologies. Innovation, clean code and pixel perfect results characterize all my projects. With attention to details, I always deliver the best solution to the clients according to their requirements.</p>
+                </Intro>
 
             </HomeContainer>
-
         );
     }
 }

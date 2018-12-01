@@ -7,6 +7,13 @@ const FooterStyle = styled.footer`
     justify-content: space-between;
     padding: 0 36px;
     height: 80px;
+
+    @media (max-width: 579px) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
 `;
 
 const FooterCopy = styled.div`
@@ -14,6 +21,10 @@ const FooterCopy = styled.div`
     line-height: 80px;
     color: #ffffff;
     font-size: 14px;
+
+    @media (max-width: 579px) {
+        line-height: 40px;
+    }
 `;
 class Footer extends Component {
     setCopyrightDate() {

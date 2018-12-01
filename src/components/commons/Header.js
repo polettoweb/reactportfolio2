@@ -10,6 +10,7 @@ const HeaderStyle = styled.header`
   height: 80px;
   display: flex;
   justify-content: space-between;
+  background-image: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
 `;
 const Logo = styled.div`
     width: 36px;

@@ -16,11 +16,11 @@ const keywords = [
         opacity: '0.7'
     },
     {
-        name: 'Performance',
+        name:'Accessibility',
         opacity: '0.6'
     },
     {
-        name: 'A11y',
+        name: 'SSR',
         opacity: '0.4'
     },
     {
@@ -38,21 +38,21 @@ const KeywordsContainer = styled.div`
     position: absolute;
     z-index: 1;
     right: 10%;
-    bottom: 5%;
+    top: 70%;
     text-align: right;
 
-    @media (max-width: 579px) {
-        right: auto;
-        left: 50%;
-        bottom: 5%;
-        transform: translateX(-50%) scale(0.7);
-        background-color: rgba(255,255,255,0.05);
+    @media (max-width: 959px) {
+        position: relative;
+        width: 90%;
+        left: 5%;
     }
 
     @media (max-width: 450px) {
-        /* to fucking fix */
-        bottom:0;
-        transform: translateX(-50%) scale(0.5);
+        transform: scale(0.7);
+    }
+
+    @media (max-height: 900px) {
+        top: 60%;
     }
 
     .keywords__wrapper {
@@ -72,6 +72,9 @@ const KeywordsContainer = styled.div`
         top: 50%;
         left: 50%;
         transform: translate3d(-50%,-50%,0);
+        @media (max-width: 579px) {
+            font-size: 80px;
+        }
     }
 
     #react {
@@ -85,6 +88,12 @@ const KeywordsContainer = styled.div`
         left: 45%;
         font-size: 64px;
         transform: translateX(-50%);
+        @media (max-width: 579px) {
+            font-size: 48px;
+        }
+        @media (max-width: 450px) {
+            bottom: 17%;
+        }
     }
 
     #vue {
@@ -99,13 +108,17 @@ const KeywordsContainer = styled.div`
         font-size: 38px
     }
 
-    #performance {
+    #accessibility{
         left: 2%;
         top: 2%;
-        font-size: 50px
+        font-size: 40px;
+        @media (max-width: 450px) {
+            left:0;
+            font-size: 32px;
+        }
     }
 
-    #a11y {
+    #ssr {
         top: 25%;
         left: 30%;
         font-size: 30px
@@ -125,23 +138,6 @@ class Keywords extends Component {
                         )
                     })}
                 </div>
-                {/* <Spring config={{ duration: 3000 }} >
-                    
-                <Spring config={{ duration: 3000, delay: 1000 }} from={{ opacity: 0 }} to={{ opacity: 1 }}>
-                    {props => <p style={props}>React</p>}
-                </Spring>
-                <Spring config={{ duration: 3000, delay: 1000 }} from={{ opacity: 0 }} to={{ opacity: 1 }}>
-                    {props => <p style={props}>Vue</p>}
-                </Spring>
-                <Spring config={{ duration: 3000, delay: 1000 }} from={{ opacity: 0 }} to={{ opacity: 1 }}>
-                    {props => <p style={props}>A11y</p>}
-                </Spring>
-                <Spring config={{ duration: 3000, delay: 1000 }} from={{ opacity: 0 }} to={{ opacity: 1 }}>
-                    {props => <p style={props}>GraphQL</p>}
-                </Spring>
-                <Spring config={{ duration: 3000, delay: 1000 }} from={{ opacity: 0 }} to={{ opacity: 1 }}>
-                    {props => <p style={props}>Performance</p>}
-                </Spring> */}
             </KeywordsContainer>
         );
     }
