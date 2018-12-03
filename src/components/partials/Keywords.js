@@ -65,63 +65,63 @@ const KeywordsContainer = styled.div`
         color: white;
         font-style: italic;
         position: absolute;
-    }
-
-    #javascript {
-        font-size: 96px;
-        top: 50%;
-        left: 50%;
-        transform: translate3d(-50%,-50%,0);
-        @media (max-width: 579px) {
-            font-size: 80px;
+    
+        &:nth-child(1) {
+            font-size: 96px;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%,-50%,0);
+            @media (max-width: 579px) {
+                font-size: 80px;
+            }
         }
-    }
 
-    #react {
-        top: 5%;
-        right: 5%;
-        font-size: 48px;
-    }
-
-    #sass {
-        bottom: 8%;
-        left: 45%;
-        font-size: 64px;
-        transform: translateX(-50%);
-        @media (max-width: 579px) {
+        &:nth-child(2) {
+            top: 5%;
+            right: 5%;
             font-size: 48px;
         }
-        @media (max-width: 450px) {
-            bottom: 17%;
+
+        &:nth-child(3) {
+            bottom: 5%;
+            left: 5%;
+            font-size: 56px;
         }
-    }
 
-    #vue {
-        bottom: 5%;
-        left: 5%;
-        font-size: 56px;
-    }
-
-    #graphql {
-        right: 5%;
-        bottom: 5%;
-        font-size: 38px
-    }
-
-    #accessibility{
-        left: 2%;
-        top: 2%;
-        font-size: 40px;
-        @media (max-width: 450px) {
-            left:0;
-            font-size: 32px;
+        &:nth-child(4){
+            left: 2%;
+            top: 2%;
+            font-size: 40px;
+            @media (max-width: 450px) {
+                left:0;
+                font-size: 32px;
+            }
         }
-    }
 
-    #ssr {
-        top: 25%;
-        left: 30%;
-        font-size: 30px
+        &:nth-child(5) {
+            top: 25%;
+            left: 30%;
+            font-size: 30px
+        }
+
+        &:nth-child(6) {
+            right: 5%;
+            bottom: 5%;
+            font-size: 38px
+        }
+
+        &:nth-child(7) {
+            bottom: 8%;
+            left: 45%;
+            font-size: 64px;
+            transform: translateX(-50%);
+            @media (max-width: 579px) {
+                font-size: 48px;
+            }
+            @media (max-width: 450px) {
+                bottom: 17%;
+            }
+        }
     }
 `;
 

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Slider from 'react-slick';
 import PortfolioItem from "./partials/PortfolioItem";
 import missguided from '../img/missguided-portfolio.jpg';
 import mennace from '../img/mennace-portfolio.jpg';
@@ -77,15 +78,25 @@ const PortfolioItems = [
 ]
 class Portfolio extends Component {
   render() {
+    var settings = {
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true
+    };
     return (
       <div className="portfolio">
-        <div className="portfolio__content">
+        <div className="portfolio__content" height="500px">
           <h1>Portfolio</h1>
-          {PortfolioItems.map( item => {
-            return (
-              <PortfolioItem {...item} />
-            );
-          })}
+          <Slider {...settings}>
+            {PortfolioItems.map( (item, index) => {
+              return (
+                <PortfolioItem key={index} {...item} />
+                );
+            })}
+          </Slider>
         </div>
       </div>
     );
